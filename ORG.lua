@@ -1,26 +1,26 @@
 local player = game.Players.LocalPlayer
 
 -- Remove previous instance
-local oldGui = player:FindFirstChild("PlayerGui"):FindFirstChild("ROX_UI")
+local oldGui = player:FindFirstChild("PlayerGui"):FindFirstChild("ORG_UI")
 if oldGui then oldGui:Destroy() end
 
 -- Create GUI
 local gui = Instance.new("ScreenGui")
-gui.Name = "ROX_UI"
+gui.Name = "ORG_UI"
 gui.ResetOnSpawn = false
 gui.IgnoreGuiInset = false
 gui.Parent = player:WaitForChild("PlayerGui")
 
--- Create ROX Button
+-- Create ORG Button
 local openButton = Instance.new("TextButton")
-openButton.Name = "OpenROX"
+openButton.Name = "OpenORG"
 openButton.Parent = gui
 openButton.Size = UDim2.new(0, 40, 0, 40)
 openButton.Position = UDim2.new(0, 10, 0, 50) -- Initial top-left position
 openButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 openButton.BorderSizePixel = 0
 openButton.AutoButtonColor = false
-openButton.Text = "ROX"
+openButton.Text = "ORG"
 openButton.TextColor3 = Color3.fromRGB(204, 0, 255)
 openButton.TextSize = 16
 openButton.Font = Enum.Font.SourceSansItalic
@@ -74,5 +74,5 @@ end)
 
 -- On click action
 openButton.MouseButton1Click:Connect(function()
-	print("ROX Clicked")
+	print("ORG Clicked")
 end)
